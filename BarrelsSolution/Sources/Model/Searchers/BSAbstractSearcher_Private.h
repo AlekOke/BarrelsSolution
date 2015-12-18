@@ -16,6 +16,9 @@
 @property (nonatomic, strong) NSSet<BSNode *> *targetNodes;
 @property (nonatomic, strong) NSMutableSet<BSNode *> *visitedNodes;
 
++ (NSError *)solutionNotFoundErrorWithUserInfo:(NSDictionary *)userInfo;
++ (NSError *)depthLimitOutErrorWithUserInfo:(NSDictionary *)userInfo;
+
 - (NSArray<BSNode *> *)searchSolutionWithCurrentNode:(BSNode *)currentNode depth:(NSUInteger)depth;
 
 @end

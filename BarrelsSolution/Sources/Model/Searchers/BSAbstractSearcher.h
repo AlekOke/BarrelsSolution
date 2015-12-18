@@ -9,10 +9,8 @@
 @import Foundation;
 #import "BSSolutionSearcherProtocol.h"
 
-static NSUInteger kBSSearcherDefaultDepthLimit = 500;
-
 @interface BSAbstractSearcher : NSObject <BSSolutionSearcher>
 
-// 
+// empty
 
 @end

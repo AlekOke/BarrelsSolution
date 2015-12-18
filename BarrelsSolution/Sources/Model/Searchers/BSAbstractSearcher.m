@@ -47,6 +47,16 @@ static NSUInteger kBSSearcherInitialDepthLevel = 0;
 
 #pragma mark - Protected
 
++ (NSError *)solutionNotFoundErrorWithUserInfo:(NSDictionary *)userInfo
+{
+	return [NSError errorWithDomain:kBSSolutionSearcherErrorDomain code:kBSSolutionSearcherErrorSolutionNotFound userInfo:userInfo];
+}
+
++ (NSError *)depthLimitOutErrorWithUserInfo:(NSDictionary *)userInfo
+{
+	return [NSError errorWithDomain:kBSSolutionSearcherErrorDomain code:kBSSolutionSearcherErrorDepthLimitOut userInfo:userInfo];
+}
+
 - (NSArray<BSNode *> *)searchSolutionWithCurrentNode:(BSNode *)currentNode depth:(NSUInteger)depth
 {
 	@throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"%@ must be overridden", NSStringFromSelector(_cmd)] userInfo:nil];

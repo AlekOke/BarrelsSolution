@@ -10,6 +10,16 @@
 
 @class BSNode;
 
+static NSUInteger kBSSearcherDefaultDepthLimit = 500;
+
+static NSString *kBSSolutionSearcherErrorDomain = @"BSSolutionSearcherErrorDomain";
+
+typedef NS_ENUM(NSUInteger, BSSolutionSearcherErrorCode)
+{
+	kBSSolutionSearcherErrorSolutionNotFound	= 1,
+	kBSSolutionSearcherErrorDepthLimitOut		= 2,
+};
+
 typedef void(^BSSolutionSearcherCompletionBlock)(NSArray<BSNode *> *solution, NSError *error);
 
 @protocol BSSolutionSearcher <NSObject>

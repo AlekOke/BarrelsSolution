@@ -27,6 +27,16 @@
 	return self;
 }
 
+- (BOOL)isEmpty
+{
+	return self.value == kBSEmptyStateValue;
+}
+
+- (BOOL)isFull
+{
+	return self.container.capasity == self.value;
+}
+
 - (BOOL)isEqualToState:(BSContainerState *)state;
 {
 	return [self.container isEqualToContainer:state.container] && self.value == state.value;

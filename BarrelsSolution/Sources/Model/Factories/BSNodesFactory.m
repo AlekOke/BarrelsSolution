@@ -69,7 +69,7 @@
 
 - (BOOL)matchRulesWithGivingContainerState:(BSContainerState *)givingContainerState takingContainerState:(BSContainerState *)takingContainerState
 {
-	return givingContainerState.value > kBSEmptyStateValue && takingContainerState.value != takingContainerState.container.capasity;
+	return !givingContainerState.isEmpty && !takingContainerState.isFull;
 }
 
 #pragma mark - Convenient

@@ -20,25 +20,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cnx-lM-wsx" userLabel="Barrels Container">
                                 <rect key="frame" x="0.0" y="20" width="600" height="430"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzp-cB-Txs" userLabel="Barrel View 1">
-                                        <rect key="frame" x="67" y="115" width="150" height="200"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzp-cB-Txs" userLabel="Barrel View 0">
+                                        <rect key="frame" x="8" y="20" width="189" height="390"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nU-1a-P0h" userLabel="Name Label">
-                                                <rect key="frame" x="54" y="8" width="42" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ort-AB-s1L" userLabel="Value Label 0">
+                                                <rect key="frame" x="74" y="173" width="42" height="21"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbO-9h-s2A" userLabel="Capacity Label">
-                                                <rect key="frame" x="54" y="90" width="42" height="21"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ort-AB-s1L" userLabel="Value Label">
-                                                <rect key="frame" x="54" y="31" width="42" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbO-9h-s2A" userLabel="Capacity Label 0">
+                                                <rect key="frame" x="74" y="197" width="42" height="21"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -48,35 +41,24 @@
                                         <animations/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="8nV-nI-gwN"/>
-                                            <constraint firstItem="KbO-9h-s2A" firstAttribute="centerX" secondItem="jzp-cB-Txs" secondAttribute="centerX" id="AqQ-5W-WGo"/>
-                                            <constraint firstItem="KbO-9h-s2A" firstAttribute="centerY" secondItem="jzp-cB-Txs" secondAttribute="centerY" id="O2D-0e-5r1"/>
-                                            <constraint firstItem="2nU-1a-P0h" firstAttribute="top" secondItem="jzp-cB-Txs" secondAttribute="top" constant="8" id="Srm-BO-Nea"/>
-                                            <constraint firstAttribute="height" constant="200" id="bOf-eh-Pz1"/>
-                                            <constraint firstItem="Ort-AB-s1L" firstAttribute="centerX" secondItem="2nU-1a-P0h" secondAttribute="centerX" id="goi-w5-8l2"/>
-                                            <constraint firstItem="2nU-1a-P0h" firstAttribute="centerX" secondItem="jzp-cB-Txs" secondAttribute="centerX" id="nyc-cJ-lYT"/>
-                                            <constraint firstItem="Ort-AB-s1L" firstAttribute="top" secondItem="2nU-1a-P0h" secondAttribute="bottom" constant="2" id="yIJ-9i-M4q"/>
+                                            <constraint firstItem="KbO-9h-s2A" firstAttribute="centerX" secondItem="jzp-cB-Txs" secondAttribute="centerX" id="Ezv-O3-njK"/>
+                                            <constraint firstItem="KbO-9h-s2A" firstAttribute="centerY" secondItem="jzp-cB-Txs" secondAttribute="centerY" constant="12" id="KzO-lM-6LV"/>
+                                            <constraint firstItem="Ort-AB-s1L" firstAttribute="centerX" secondItem="jzp-cB-Txs" secondAttribute="centerX" id="gBS-He-rvn"/>
+                                            <constraint firstItem="Ort-AB-s1L" firstAttribute="centerY" secondItem="jzp-cB-Txs" secondAttribute="centerY" constant="-12" id="w8f-Mb-b0D"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUB-Bo-lSv" userLabel="Barrel View 2">
-                                        <rect key="frame" x="225" y="115" width="150" height="200"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wn4-yL-kiy" userLabel="Barrel View 2">
+                                        <rect key="frame" x="403" y="20" width="189" height="390"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j80-kW-hWX" userLabel="Name Label">
-                                                <rect key="frame" x="54" y="8" width="42" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXh-iU-Yda" userLabel="Value Label 2">
+                                                <rect key="frame" x="73" y="173" width="42" height="21"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrf-g5-Owm" userLabel="Capacity Label">
-                                                <rect key="frame" x="54" y="90" width="42" height="21"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgE-nv-k6J" userLabel="Value Label">
-                                                <rect key="frame" x="54" y="31" width="42" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrx-L0-Ok1" userLabel="Capacity Label 2">
+                                                <rect key="frame" x="73" y="197" width="42" height="21"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -86,35 +68,24 @@
                                         <animations/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="7vP-Tv-Gmj"/>
-                                            <constraint firstItem="j80-kW-hWX" firstAttribute="top" secondItem="XUB-Bo-lSv" secondAttribute="top" constant="8" id="EOO-4m-mv8"/>
-                                            <constraint firstItem="IgE-nv-k6J" firstAttribute="top" secondItem="j80-kW-hWX" secondAttribute="bottom" constant="2" id="Mh6-H8-0YC"/>
-                                            <constraint firstItem="vrf-g5-Owm" firstAttribute="centerY" secondItem="XUB-Bo-lSv" secondAttribute="centerY" id="Yt1-5n-KPy"/>
-                                            <constraint firstAttribute="width" constant="150" id="aPQ-bg-0ip"/>
-                                            <constraint firstItem="j80-kW-hWX" firstAttribute="centerX" secondItem="XUB-Bo-lSv" secondAttribute="centerX" id="cDo-wT-83g"/>
-                                            <constraint firstItem="IgE-nv-k6J" firstAttribute="centerX" secondItem="j80-kW-hWX" secondAttribute="centerX" id="ojU-wj-FhR"/>
-                                            <constraint firstItem="vrf-g5-Owm" firstAttribute="centerX" secondItem="XUB-Bo-lSv" secondAttribute="centerX" id="u62-CM-ksW"/>
+                                            <constraint firstItem="Wrx-L0-Ok1" firstAttribute="centerX" secondItem="Wn4-yL-kiy" secondAttribute="centerX" id="2Dh-7V-NKB"/>
+                                            <constraint firstItem="Wrx-L0-Ok1" firstAttribute="centerY" secondItem="Wn4-yL-kiy" secondAttribute="centerY" constant="12" id="J9v-4o-cYk"/>
+                                            <constraint firstItem="LXh-iU-Yda" firstAttribute="centerY" secondItem="Wn4-yL-kiy" secondAttribute="centerY" constant="-12" id="RLB-ZM-2PR"/>
+                                            <constraint firstItem="LXh-iU-Yda" firstAttribute="centerX" secondItem="Wn4-yL-kiy" secondAttribute="centerX" id="qmd-cg-SLc"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wn4-yL-kiy" userLabel="Barrel View 3">
-                                        <rect key="frame" x="383" y="115" width="150" height="200"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUB-Bo-lSv" userLabel="Barrel View 1">
+                                        <rect key="frame" x="205" y="20" width="190" height="390"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqg-LJ-mMd" userLabel="Name Label">
-                                                <rect key="frame" x="54" y="8" width="42" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgE-nv-k6J" userLabel="Value Label 1">
+                                                <rect key="frame" x="74" y="173" width="42" height="21"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrx-L0-Ok1" userLabel="Capacity Label">
-                                                <rect key="frame" x="54" y="90" width="42" height="21"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXh-iU-Yda" userLabel="Value Label">
-                                                <rect key="frame" x="54" y="31" width="42" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrf-g5-Owm" userLabel="Capacity Label 1">
+                                                <rect key="frame" x="74" y="197" width="42" height="21"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -124,26 +95,30 @@
                                         <animations/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="FsV-B0-Pw7"/>
-                                            <constraint firstAttribute="height" constant="200" id="MB7-1z-p7E"/>
-                                            <constraint firstItem="LXh-iU-Yda" firstAttribute="centerX" secondItem="Cqg-LJ-mMd" secondAttribute="centerX" id="SNt-wf-0M2"/>
-                                            <constraint firstItem="Wrx-L0-Ok1" firstAttribute="centerX" secondItem="Wn4-yL-kiy" secondAttribute="centerX" id="UmQ-hM-hKe"/>
-                                            <constraint firstItem="LXh-iU-Yda" firstAttribute="top" secondItem="Cqg-LJ-mMd" secondAttribute="bottom" constant="2" id="nkl-y4-Afo"/>
-                                            <constraint firstItem="Wrx-L0-Ok1" firstAttribute="centerY" secondItem="Wn4-yL-kiy" secondAttribute="centerY" id="oCC-Hu-1oB"/>
-                                            <constraint firstItem="Cqg-LJ-mMd" firstAttribute="top" secondItem="Wn4-yL-kiy" secondAttribute="top" constant="8" id="qXn-Cw-b1I"/>
-                                            <constraint firstItem="Cqg-LJ-mMd" firstAttribute="centerX" secondItem="Wn4-yL-kiy" secondAttribute="centerX" id="rzQ-p8-4Tg"/>
+                                            <constraint firstItem="IgE-nv-k6J" firstAttribute="centerY" secondItem="XUB-Bo-lSv" secondAttribute="centerY" constant="-12" id="8kr-yb-VlQ"/>
+                                            <constraint firstItem="vrf-g5-Owm" firstAttribute="centerX" secondItem="XUB-Bo-lSv" secondAttribute="centerX" id="S6G-EL-lUc"/>
+                                            <constraint firstItem="IgE-nv-k6J" firstAttribute="centerX" secondItem="XUB-Bo-lSv" secondAttribute="centerX" id="bGg-fu-A1C"/>
+                                            <constraint firstItem="vrf-g5-Owm" firstAttribute="centerY" secondItem="XUB-Bo-lSv" secondAttribute="centerY" constant="12" id="koi-wE-bjn"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Wn4-yL-kiy" firstAttribute="leading" secondItem="XUB-Bo-lSv" secondAttribute="trailing" constant="8" id="91Z-xs-deI"/>
-                                    <constraint firstItem="XUB-Bo-lSv" firstAttribute="centerX" secondItem="Cnx-lM-wsx" secondAttribute="centerX" id="IwE-ee-uWp"/>
-                                    <constraint firstItem="XUB-Bo-lSv" firstAttribute="centerY" secondItem="jzp-cB-Txs" secondAttribute="centerY" id="KSz-6h-VOG"/>
-                                    <constraint firstItem="XUB-Bo-lSv" firstAttribute="leading" secondItem="jzp-cB-Txs" secondAttribute="trailing" constant="8" id="Vqe-pC-vI5"/>
-                                    <constraint firstItem="Wn4-yL-kiy" firstAttribute="centerY" secondItem="jzp-cB-Txs" secondAttribute="centerY" id="d4G-Bw-5Cq"/>
-                                    <constraint firstItem="XUB-Bo-lSv" firstAttribute="centerY" secondItem="Cnx-lM-wsx" secondAttribute="centerY" id="f8p-Fa-mW2"/>
+                                    <constraint firstItem="XUB-Bo-lSv" firstAttribute="centerY" secondItem="jzp-cB-Txs" secondAttribute="centerY" id="8H2-Ra-mhd"/>
+                                    <constraint firstAttribute="bottom" secondItem="XUB-Bo-lSv" secondAttribute="bottom" constant="20" id="Djs-Kg-3Al"/>
+                                    <constraint firstItem="Wn4-yL-kiy" firstAttribute="width" secondItem="XUB-Bo-lSv" secondAttribute="width" id="KgK-Lg-MwE"/>
+                                    <constraint firstItem="Wn4-yL-kiy" firstAttribute="height" secondItem="XUB-Bo-lSv" secondAttribute="height" id="UF9-xe-0pJ"/>
+                                    <constraint firstItem="Wn4-yL-kiy" firstAttribute="centerY" secondItem="XUB-Bo-lSv" secondAttribute="centerY" id="Woo-25-Btg"/>
+                                    <constraint firstItem="XUB-Bo-lSv" firstAttribute="leading" secondItem="jzp-cB-Txs" secondAttribute="trailing" constant="8" id="YaE-Qo-400"/>
+                                    <constraint firstItem="Wn4-yL-kiy" firstAttribute="centerY" secondItem="XUB-Bo-lSv" secondAttribute="centerY" id="bzB-KJ-JSM"/>
+                                    <constraint firstItem="XUB-Bo-lSv" firstAttribute="width" secondItem="jzp-cB-Txs" secondAttribute="width" id="dJy-4b-NXC"/>
+                                    <constraint firstItem="jzp-cB-Txs" firstAttribute="leading" secondItem="Cnx-lM-wsx" secondAttribute="leading" constant="8" id="dTG-o1-4Be"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wn4-yL-kiy" secondAttribute="trailing" constant="8" id="kuD-Eh-Eba"/>
+                                    <constraint firstItem="Wn4-yL-kiy" firstAttribute="leading" secondItem="XUB-Bo-lSv" secondAttribute="trailing" constant="8" id="lXp-qw-Hnu"/>
+                                    <constraint firstItem="XUB-Bo-lSv" firstAttribute="top" secondItem="Cnx-lM-wsx" secondAttribute="top" constant="20" id="pbu-ah-h8r"/>
+                                    <constraint firstItem="XUB-Bo-lSv" firstAttribute="centerX" secondItem="Cnx-lM-wsx" secondAttribute="centerX" id="qc6-x1-fWr"/>
+                                    <constraint firstItem="XUB-Bo-lSv" firstAttribute="height" secondItem="jzp-cB-Txs" secondAttribute="height" id="yfI-Cy-k9v"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cDf-g3-H8B" userLabel="Controls Container">
@@ -209,22 +184,20 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="containerCapacityLabel1" destination="Ort-AB-s1L" id="Mfe-v3-dSY"/>
-                        <outlet property="containerCapacityLabel2" destination="IgE-nv-k6J" id="7hR-Bu-Lkg"/>
-                        <outlet property="containerCapacityLabel3" destination="LXh-iU-Yda" id="Eql-sK-OJx"/>
-                        <outlet property="containerNameLabel1" destination="2nU-1a-P0h" id="UlA-Et-a4s"/>
-                        <outlet property="containerNameLabel2" destination="j80-kW-hWX" id="92r-GP-xK3"/>
-                        <outlet property="containerNameLabel3" destination="Cqg-LJ-mMd" id="jNN-7t-MsV"/>
-                        <outlet property="containerValueLabel1" destination="KbO-9h-s2A" id="Vzb-TR-Zwy"/>
-                        <outlet property="containerValueLabel2" destination="vrf-g5-Owm" id="l7n-aX-XJG"/>
-                        <outlet property="containerValueLabel3" destination="Wrx-L0-Ok1" id="typ-Z9-uEQ"/>
-                        <outlet property="nextButton" destination="vBf-jd-t5p" id="RS5-p6-c9g"/>
-                        <outlet property="pageLabel" destination="354-qn-pU4" id="iEW-fE-L1P"/>
-                        <outlet property="previousButton" destination="GdJ-ir-QYb" id="61B-hf-9UV"/>
+                        <outlet property="nextButton" destination="vBf-jd-t5p" id="acf-L9-R2M"/>
+                        <outlet property="pageLabel" destination="354-qn-pU4" id="hbU-dC-Xaw"/>
+                        <outlet property="previousButton" destination="GdJ-ir-QYb" id="Uf7-iz-Hpz"/>
+                        <outletCollection property="containerCapacityLabels" destination="KbO-9h-s2A" id="yjq-E6-NB3"/>
+                        <outletCollection property="containerCapacityLabels" destination="vrf-g5-Owm" id="dx6-AN-UHg"/>
+                        <outletCollection property="containerCapacityLabels" destination="Wrx-L0-Ok1" id="nZz-J5-iub"/>
+                        <outletCollection property="containerValuesLabels" destination="Ort-AB-s1L" id="CNL-uW-OX1"/>
+                        <outletCollection property="containerValuesLabels" destination="IgE-nv-k6J" id="fHU-RS-T1V"/>
+                        <outletCollection property="containerValuesLabels" destination="LXh-iU-Yda" id="tdE-mh-XKi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="357" y="332"/>
         </scene>
     </scenes>
 </document>

@@ -29,7 +29,7 @@
 	return self;
 }
 
-- (NSSet<BSNode *> *)nodesWithCurrentNode:(BSNode *)node
+- (NSEnumerator<BSNode *> *)nodesWithCurrentNode:(BSNode *)node
 {
 	NSMutableSet<BSNode *> *nodes = [NSMutableSet new];
 	
@@ -64,7 +64,7 @@
 		}
 	}
 	
-	return [nodes copy];
+	return [nodes objectEnumerator];
 }
 
 - (BOOL)matchRulesWithGivingContainerState:(BSContainerState *)givingContainerState takingContainerState:(BSContainerState *)takingContainerState

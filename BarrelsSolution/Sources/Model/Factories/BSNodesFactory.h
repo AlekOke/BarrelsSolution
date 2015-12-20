@@ -15,6 +15,6 @@
 
 - (instancetype)initWithContainers:(NSArray<BSContainer *> *)containers;
 
-- (NSSet<BSNode *> *)nodesWithCurrentNode:(BSNode *)node;
+- (NSEnumerator<BSNode *> *)nodesWithCurrentNode:(BSNode *)node;
 
 @end

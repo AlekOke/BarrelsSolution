@@ -20,33 +20,34 @@
 
 - (NSArray<BSNode *> *)searchSolutionWithCurrentNode:(BSNode *)currentNode depth:(NSUInteger)depth
 {
-	NSLog(@"%@, depth: %i", currentNode, depth);
-	
 	NSArray<BSNode *> *solution = nil;
 	
 	if (depth < self.depthLimit)
 	{
+		NSLog(@"%@, depth: %i", currentNode, depth);
+
 		[self.visitedNodes addObject:currentNode];
 		
 		if (![self.targetNodes containsObject:currentNode])
 		{
-			NSSet<BSNode *> *nodes = [self.nodesFactory nodesWithCurrentNode:currentNode];
-			for (BSNode *nextNode in nodes)
+			BSNode *nextNode = nil;
+			NSEnumerator *enumerator = [self.nodesFactory nodesWithCurrentNode:currentNode];
+			while (solution.count == 0 && (nextNode = [enumerator nextObject]))
 			{
 				if (![self.visitedNodes containsObject:nextNode])
 				{
 					solution = [self searchSolutionWithCurrentNode:nextNode depth:(depth + 1)];
-					if (solution.count > 0)
-					{
-						solution = [@[nextNode] arrayByAddingObjectsFromArray:solution];
-						break;
-					}
 				}
+			}
+			
+			if (solution.count > 0)
+			{
+				solution = [@[currentNode] arrayByAddingObjectsFromArray:solution];
 			}
 		}
 		else
 		{
-			NSLog(@"Find solution %@", currentNode);
+			NSLog(@"Find solution %@, depth: %i", currentNode, depth);
 			solution = @[currentNode];
 		}
 	}

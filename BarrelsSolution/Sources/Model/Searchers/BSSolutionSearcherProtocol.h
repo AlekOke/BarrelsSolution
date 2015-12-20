@@ -9,6 +9,7 @@
 @import Foundation;
 
 @class BSNode;
+@class BSContainer;
 
 static NSUInteger kBSSearcherDefaultDepthLimit = 500;
 
@@ -24,6 +25,7 @@ typedef void(^BSSolutionSearcherCompletionBlock)(NSArray<BSNode *> *solution, NS
 
 @protocol BSSolutionSearcher <NSObject>
 
+@property (nonatomic, strong) NSArray<BSContainer *> *containers;
 @property (nonatomic, strong) NSError *error;
 @property (nonatomic, assign) NSUInteger depthLimit;
 

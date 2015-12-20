@@ -9,8 +9,10 @@
 @import Foundation;
 #import "BSSolutionSearcherProtocol.h"
 
+@class BSContainer;
+
 @interface BSAbstractSearcher : NSObject <BSSolutionSearcher>
 
-// empty
+- (instancetype)initWithContainers:(NSArray<BSContainer *> *)containers;
 
 @end

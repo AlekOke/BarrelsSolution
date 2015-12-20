@@ -8,14 +8,13 @@
 
 @import Foundation;
 
-@class BSContainer;
 @class BSContainerState;
 
 @interface BSNode : NSObject
 
-@property (nonatomic, strong, readonly) NSMapTable<BSContainer *, BSContainerState *> *states;
+@property (nonatomic, strong, readonly) NSDictionary<NSString *, BSContainerState *> *states;
 
-- (instancetype)initWithStates:(NSMapTable<BSContainer *, BSContainerState *> *)states;
+- (instancetype)initWithStates:(NSDictionary<NSString *, BSContainerState *> *)states;
 
 - (BOOL)isEqualToNode:(BSNode *)node;
 

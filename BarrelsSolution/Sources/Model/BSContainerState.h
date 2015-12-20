@@ -19,6 +19,7 @@ static NSUInteger kBSEmptyStateValue = 0;
 @property (nonatomic, assign, readonly, getter=isFull) BOOL full;
 @property (nonatomic, assign) NSUInteger value;
 
++ (instancetype)stateWithContainer:(BSContainer *)container value:(NSUInteger)value;
 - (instancetype)initWithContainer:(BSContainer *)container;
 
 - (BOOL)isEqualToState:(BSContainerState *)state;

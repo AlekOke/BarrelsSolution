@@ -30,17 +30,22 @@
 
 - (BOOL)isEqualToContainer:(BSContainer *)container
 {
-	return [self.name isEqualToString:container.name];
+	return self == container || [self.name isEqualToString:container.name];
 }
 
 - (BOOL)isEqual:(id)object
 {
-	return self == object || ([self isKindOfClass:object] && [self isEqualToContainer:object]);
+	return [object isKindOfClass:[self class]] && [self isEqualToContainer:object];
 }
 
 - (NSUInteger)hash
 {
 	return self.name.hash;
+}
+
+- (NSString *)description
+{
+	return [NSString stringWithFormat:@"%@ (%i)", self.name, self.capasity];
 }
 
 @end

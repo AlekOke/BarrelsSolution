@@ -6,10 +6,11 @@
 //  Copyright © 2015 Aleksey Prykhodko. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
-@interface ViewController : UIViewController
+@interface BSViewController : UIViewController
 
+// empty
 
 @end
 

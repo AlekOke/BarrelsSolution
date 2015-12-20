@@ -17,6 +17,13 @@
 
 @implementation BSContainerState
 
++ (instancetype)stateWithContainer:(BSContainer *)container value:(NSUInteger)value
+{
+	BSContainerState *containerState = [[BSContainerState alloc] initWithContainer:container];
+	containerState.value = value;
+	return containerState;
+}
+
 - (instancetype)initWithContainer:(BSContainer *)container;
 {
 	self = [super init];
@@ -39,17 +46,22 @@
 
 - (BOOL)isEqualToState:(BSContainerState *)state;
 {
-	return [self.container isEqualToContainer:state.container] && self.value == state.value;
+	return self == state || ([self.container isEqual:state.container] && self.value == state.value);
 }
 
 - (BOOL)isEqual:(id)object
 {
-	return self == object || ([self isKindOfClass:object] && [self isEqualToState:object]);
+	return [object isKindOfClass:[self class]] && [self isEqualToState:object];
 }
 
 - (NSUInteger)hash
 {
 	return self.container.hash + self.value;
+}
+
+- (NSString *)description
+{
+	return [NSString stringWithFormat:@"%i - %@", self.value, self.container];
 }
 
 @end

@@ -10,11 +10,14 @@
 #import "BSAbstractSearcher.h"
 
 @class BSNode;
+@class BSContainer;
+@class BSNodesFactory;
 
 @interface BSAbstractSearcher (Private)
 
 @property (nonatomic, strong) NSSet<BSNode *> *targetNodes;
 @property (nonatomic, strong) NSMutableSet<BSNode *> *visitedNodes;
+@property (nonatomic, strong) BSNodesFactory *nodesFactory;
 
 + (NSError *)solutionNotFoundErrorWithUserInfo:(NSDictionary *)userInfo;
 + (NSError *)depthLimitOutErrorWithUserInfo:(NSDictionary *)userInfo;

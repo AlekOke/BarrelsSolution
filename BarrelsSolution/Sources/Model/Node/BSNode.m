@@ -11,13 +11,13 @@
 
 @interface BSNode ()
 
-@property (nonatomic, strong) NSMapTable<BSContainer *, BSContainerState *> *states;
+@property (nonatomic, strong) NSDictionary<NSString *, BSContainerState *> *states;
 
 @end
 
 @implementation BSNode
 
-- (instancetype)initWithStates:(NSMapTable<BSContainer *, BSContainerState *> *)states
+- (instancetype)initWithStates:(NSDictionary<NSString *, BSContainerState *> *)states
 {
 	self = [super init];
 	if (self)
@@ -29,12 +29,22 @@
 
 - (BOOL)isEqualToNode:(BSNode *)node
 {
-	return [self.states isEqual:node.states];
+	return self == node || [self.states isEqualToDictionary:node.states];
+}
+
+- (BOOL)isEqual:(id)object
+{
+	return [object isKindOfClass:[self class]] && [self isEqualToNode:object];
 }
 
 - (NSUInteger)hash
 {
 	return self.states.hash;
+}
+
+- (NSString *)description
+{
+	return [NSString stringWithFormat:@"%@", self.states];
 }
 
 @end

@@ -36,29 +36,29 @@
 	for (NSUInteger givingContainerIndex = 0; givingContainerIndex < self.containers.count; givingContainerIndex++)
 	{
 		BSContainer *givingContainer = self.containers[givingContainerIndex];
-		BSContainerState *givingContainerState = [node.states objectForKey:givingContainer];
+		BSContainerState *givingContainerState = node.states[givingContainer.name];
 		
 		for (NSUInteger takingContainerIndex = 0; takingContainerIndex < self.containers.count; takingContainerIndex++)
 		{
 			if (takingContainerIndex != givingContainerIndex)
 			{
 				BSContainer *takingContainer = self.containers[takingContainerIndex];
-				BSContainerState *takingContainerState = [node.states objectForKey:takingContainer];
+				BSContainerState *takingContainerState = node.states[takingContainer.name];
 				
 				if ([self matchRulesWithGivingContainerState:givingContainerState takingContainerState:takingContainerState])
 				{
 					NSUInteger balance = takingContainer.capasity - takingContainerState.value;
-					NSMapTable<BSContainer *, BSContainerState *> *states = [node.states copy];
+					NSMutableDictionary<NSString *, BSContainerState *> *states = [node.states mutableCopy];
 					
-					NSUInteger gaveContainerStateValue = (balance > givingContainerState.value) ? takingContainerState.value + givingContainerState.value : takingContainer.capasity;
-					BSContainerState *gaveContainerState = [self containerStateWithContainer:givingContainer value:gaveContainerStateValue];
-					[states setObject:gaveContainerState forKey:givingContainer];
+					NSUInteger gaveContainerStateValue = (balance > givingContainerState.value) ? kBSEmptyStateValue : givingContainerState.value - balance;
+					BSContainerState *gaveContainerState = [BSContainerState stateWithContainer:givingContainer value:gaveContainerStateValue];
+					states[givingContainer.name] = gaveContainerState;
 					
-					NSUInteger tookContainerStateValue = (balance > givingContainerState.value) ? kBSEmptyStateValue : givingContainerState.value - balance;
-					BSContainerState *tookContainerState = [self containerStateWithContainer:takingContainer value:tookContainerStateValue];
-					[states setObject:tookContainerState forKey:takingContainer];
+					NSUInteger tookContainerStateValue = (balance > givingContainerState.value) ? takingContainerState.value + givingContainerState.value : takingContainer.capasity;
+					BSContainerState *tookContainerState = [BSContainerState stateWithContainer:takingContainer value:tookContainerStateValue];
+					states[takingContainer.name] = tookContainerState;
 					
-					[nodes addObject:[[BSNode alloc] initWithStates:states]];
+					[nodes addObject:[[BSNode alloc] initWithStates:[states copy]]];
 				}
 			}
 		}
@@ -70,15 +70,6 @@
 - (BOOL)matchRulesWithGivingContainerState:(BSContainerState *)givingContainerState takingContainerState:(BSContainerState *)takingContainerState
 {
 	return !givingContainerState.isEmpty && !takingContainerState.isFull;
-}
-
-#pragma mark - Convenient
-
-- (BSContainerState *)containerStateWithContainer:(BSContainer *)container value:(NSUInteger)value
-{
-	BSContainerState *containerState = [[BSContainerState alloc] initWithContainer:container];
-	containerState.value = value;
-	return containerState;
 }
 
 @end

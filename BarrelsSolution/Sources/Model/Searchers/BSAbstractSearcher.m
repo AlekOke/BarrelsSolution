@@ -8,6 +8,7 @@
 
 #import "BSAbstractSearcher.h"
 #import "BSAbstractSearcher_Private.h"
+#import "BSNodesFactory.h"
 
 static NSUInteger kBSSearcherInitialDepthLevel = 0;
 
@@ -16,21 +17,25 @@ static NSUInteger kBSSearcherInitialDepthLevel = 0;
 // private
 @property (nonatomic, strong) NSSet<BSNode *> *targetNodes;
 @property (nonatomic, strong) NSMutableSet<BSNode *> *visitedNodes;
+@property (nonatomic, strong) BSNodesFactory *nodesFactory;
 //
 
 @end
 
 @implementation BSAbstractSearcher
 
+@synthesize containers = _containers;
 @synthesize error = _error;
 @synthesize depthLimit = _depthLimit;
 @synthesize visitedNodes = _visitedNodes;
+@synthesize nodesFactory = _nodesFactory;
 
-- (instancetype)init
+- (instancetype)initWithContainers:(NSArray<BSContainer *> *)containers
 {
 	self = [super init];
 	if (self)
 	{
+		self.nodesFactory = [[BSNodesFactory alloc] initWithContainers:containers];
 		self.depthLimit = kBSSearcherDefaultDepthLimit;
 	}
 	return self;

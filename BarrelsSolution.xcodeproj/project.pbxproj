@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3BFBD7641C23714800DEEBD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFBD7631C23714800DEEBD5 /* main.m */; };
-		3BFBD7671C23714800DEEBD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFBD7661C23714800DEEBD5 /* AppDelegate.m */; };
+		3BFBD7671C23714800DEEBD5 /* BSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFBD7661C23714800DEEBD5 /* BSAppDelegate.m */; };
 		3BFBD76A1C23714800DEEBD5 /* BSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFBD7691C23714800DEEBD5 /* BSViewController.m */; };
 		3BFBD76D1C23714800DEEBD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BFBD76B1C23714800DEEBD5 /* Main.storyboard */; };
 		3BFBD76F1C23714800DEEBD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BFBD76E1C23714800DEEBD5 /* Assets.xcassets */; };
@@ -44,8 +44,8 @@
 /* Begin PBXFileReference section */
 		3BFBD75F1C23714800DEEBD5 /* BarrelsSolution.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarrelsSolution.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BFBD7631C23714800DEEBD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3BFBD7651C23714800DEEBD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3BFBD7661C23714800DEEBD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3BFBD7651C23714800DEEBD5 /* BSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSAppDelegate.h; sourceTree = "<group>"; };
+		3BFBD7661C23714800DEEBD5 /* BSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSAppDelegate.m; sourceTree = "<group>"; };
 		3BFBD7681C23714800DEEBD5 /* BSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSViewController.h; sourceTree = "<group>"; };
 		3BFBD7691C23714800DEEBD5 /* BSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSViewController.m; sourceTree = "<group>"; };
 		3BFBD76C1C23714800DEEBD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -183,8 +183,8 @@
 			children = (
 				3BFBD7681C23714800DEEBD5 /* BSViewController.h */,
 				3BFBD7691C23714800DEEBD5 /* BSViewController.m */,
-				3BFBD7651C23714800DEEBD5 /* AppDelegate.h */,
-				3BFBD7661C23714800DEEBD5 /* AppDelegate.m */,
+				3BFBD7651C23714800DEEBD5 /* BSAppDelegate.h */,
+				3BFBD7661C23714800DEEBD5 /* BSAppDelegate.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -427,7 +427,7 @@
 				3BFBD7AE1C2382F500DEEBD5 /* BSNodesFactory.m in Sources */,
 				3BFBD76A1C23714800DEEBD5 /* BSViewController.m in Sources */,
 				3BFBD7A21C2374DE00DEEBD5 /* BSContainerState.m in Sources */,
-				3BFBD7671C23714800DEEBD5 /* AppDelegate.m in Sources */,
+				3BFBD7671C23714800DEEBD5 /* BSAppDelegate.m in Sources */,
 				3BFBD7AB1C237E1200DEEBD5 /* BSNode.m in Sources */,
 				3BFBD7641C23714800DEEBD5 /* main.m in Sources */,
 				3BFBD7C01C23FCE200DEEBD5 /* BSBreadthFirstSearcher.m in Sources */,

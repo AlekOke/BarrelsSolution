@@ -47,14 +47,14 @@
 				
 				if ([self matchRulesWithGivingContainerState:givingContainerState takingContainerState:takingContainerState])
 				{
-					NSUInteger balance = takingContainer.capasity - takingContainerState.value;
+					NSUInteger balance = takingContainer.capacity - takingContainerState.value;
 					NSMutableDictionary<NSString *, BSContainerState *> *states = [node.states mutableCopy];
 					
 					NSUInteger gaveContainerStateValue = (balance > givingContainerState.value) ? kBSEmptyStateValue : givingContainerState.value - balance;
 					BSContainerState *gaveContainerState = [BSContainerState stateWithContainer:givingContainer value:gaveContainerStateValue];
 					states[givingContainer.name] = gaveContainerState;
 					
-					NSUInteger tookContainerStateValue = (balance > givingContainerState.value) ? takingContainerState.value + givingContainerState.value : takingContainer.capasity;
+					NSUInteger tookContainerStateValue = (balance > givingContainerState.value) ? takingContainerState.value + givingContainerState.value : takingContainer.capacity;
 					BSContainerState *tookContainerState = [BSContainerState stateWithContainer:takingContainer value:tookContainerStateValue];
 					states[takingContainer.name] = tookContainerState;
 					

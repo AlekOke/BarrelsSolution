@@ -41,7 +41,7 @@
 
 - (BOOL)isFull
 {
-	return self.container.capasity == self.value;
+	return self.container.capacity == self.value;
 }
 
 - (BOOL)isEqualToState:(BSContainerState *)state;

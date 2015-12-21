@@ -22,6 +22,7 @@
 		3BFBD7B81C23FAFD00DEEBD5 /* BSDepthFirstSearcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFBD7B71C23FAFD00DEEBD5 /* BSDepthFirstSearcher.m */; };
 		3BFBD7BD1C23FC6C00DEEBD5 /* BSAbstractSearcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFBD7BC1C23FC6C00DEEBD5 /* BSAbstractSearcher.m */; };
 		3BFBD7C01C23FCE200DEEBD5 /* BSBreadthFirstSearcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFBD7BF1C23FCE200DEEBD5 /* BSBreadthFirstSearcher.m */; };
+		3BFBD7CC1C2788DA00DEEBD5 /* BSExtendedNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFBD7CB1C2788DA00DEEBD5 /* BSExtendedNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		3BFBD7BE1C23FCE200DEEBD5 /* BSBreadthFirstSearcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSBreadthFirstSearcher.h; path = Sources/Model/Searchers/BSBreadthFirstSearcher.h; sourceTree = "<group>"; };
 		3BFBD7BF1C23FCE200DEEBD5 /* BSBreadthFirstSearcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSBreadthFirstSearcher.m; path = Sources/Model/Searchers/BSBreadthFirstSearcher.m; sourceTree = "<group>"; };
 		3BFBD7C31C24026A00DEEBD5 /* BSAbstractSearcher_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSAbstractSearcher_Private.h; path = Sources/Model/Searchers/BSAbstractSearcher_Private.h; sourceTree = "<group>"; };
+		3BFBD7CA1C2788DA00DEEBD5 /* BSExtendedNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSExtendedNode.h; path = Sources/Model/Node/BSExtendedNode.h; sourceTree = "<group>"; };
+		3BFBD7CB1C2788DA00DEEBD5 /* BSExtendedNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSExtendedNode.m; path = Sources/Model/Node/BSExtendedNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +240,8 @@
 		3BFBD7A81C237D6400DEEBD5 /* Node */ = {
 			isa = PBXGroup;
 			children = (
+				3BFBD7CA1C2788DA00DEEBD5 /* BSExtendedNode.h */,
+				3BFBD7CB1C2788DA00DEEBD5 /* BSExtendedNode.m */,
 				3BFBD7A91C237E1200DEEBD5 /* BSNode.h */,
 				3BFBD7AA1C237E1200DEEBD5 /* BSNode.m */,
 			);
@@ -421,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BFBD7CC1C2788DA00DEEBD5 /* BSExtendedNode.m in Sources */,
 				3BFBD7B81C23FAFD00DEEBD5 /* BSDepthFirstSearcher.m in Sources */,
 				3BFBD7BD1C23FC6C00DEEBD5 /* BSAbstractSearcher.m in Sources */,
 				3BFBD79F1C2374AB00DEEBD5 /* BSContainer.m in Sources */,

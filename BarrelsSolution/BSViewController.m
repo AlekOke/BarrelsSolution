@@ -7,6 +7,7 @@
 //
 
 #import "BSViewController.h"
+#import "BSBreadthFirstSearcher.h"
 #import "BSDepthFirstSearcher.h"
 #import "BSNode.h"
 #import "BSContainer.h"
@@ -46,7 +47,7 @@
 		BSContainerState *containerState = node.states[container.name];
 		
 		self.containerValuesLabels[containerIndex].text = [NSString stringWithFormat:@"%i", containerState.value];
-		self.containerCapacityLabels[containerIndex].text = [NSString stringWithFormat:@"(%i)", container.capasity];
+		self.containerCapacityLabels[containerIndex].text = [NSString stringWithFormat:@"(%i)", container.capacity];
 	}
 }
 
@@ -54,7 +55,7 @@
 
 - (id<BSSolutionSearcher>)solutionSearcher
 {
-	return [[BSDepthFirstSearcher alloc] initWithContainers:self.containers];
+	return [[BSBreadthFirstSearcher alloc] initWithContainers:self.containers];
 }
 
 #pragma mark - UIViewController

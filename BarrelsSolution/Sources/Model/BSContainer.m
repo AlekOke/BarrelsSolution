@@ -11,7 +11,7 @@
 @interface BSContainer ()
 
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, assign) NSUInteger capasity;
+@property (nonatomic, assign) NSUInteger capacity;
 
 @end
 
@@ -23,7 +23,7 @@
 	if (self)
 	{
 		self.name = name;
-		self.capasity = capasity;
+		self.capacity = capasity;
 	}
 	return self;
 }
@@ -45,7 +45,7 @@
 
 - (NSString *)description
 {
-	return [NSString stringWithFormat:@"%@ (%i)", self.name, self.capasity];
+	return [NSString stringWithFormat:@"%@ (%i)", self.name, self.capacity];
 }
 
 @end

@@ -22,7 +22,7 @@
 + (NSError *)solutionNotFoundErrorWithUserInfo:(NSDictionary *)userInfo;
 + (NSError *)depthLimitOutErrorWithUserInfo:(NSDictionary *)userInfo;
 
-- (NSArray<BSNode *> *)searchSolutionWithCurrentNode:(BSNode *)currentNode depth:(NSUInteger)depth;
+- (NSArray<BSNode *> *)searchSolutionWithNode:(BSNode *)node depth:(NSUInteger)depth;
 
 @end
 

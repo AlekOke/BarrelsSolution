@@ -7,6 +7,7 @@
 //
 
 #import "BSNode.h"
+#import "BSContainer.h"
 #import "BSContainerState.h"
 
 @interface BSNode ()
@@ -44,7 +45,13 @@
 
 - (NSString *)description
 {
-	return [NSString stringWithFormat:@"%@", self.states];
+	NSMutableString *result = [NSMutableString new];
+	for (BSContainerState *containerState in self.states.allValues)
+	{
+		[result appendFormat:@"%i(%i), ", containerState.value, containerState.container.capacity];		
+	}
+	
+	return result;
 }
 
 @end

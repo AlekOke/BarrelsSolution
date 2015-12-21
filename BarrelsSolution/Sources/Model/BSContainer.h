@@ -11,7 +11,7 @@
 @interface BSContainer : NSObject
 
 @property (nonatomic, strong, readonly) NSString *name;
-@property (nonatomic, assign, readonly) NSUInteger capasity;
+@property (nonatomic, assign, readonly) NSUInteger capacity;
 
 - (instancetype)initWithName:(NSString *)name capasity:(NSUInteger)capasity;
 

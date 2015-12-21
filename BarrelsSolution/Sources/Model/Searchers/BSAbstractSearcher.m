@@ -46,7 +46,7 @@ static NSUInteger kBSSearcherInitialDepthLevel = 0;
 	self.targetNodes = targetNodes;
 	self.visitedNodes = [NSMutableSet new];
 	
-	NSArray<BSNode *> *solution = [self searchSolutionWithCurrentNode:rootNode depth:kBSSearcherInitialDepthLevel];
+	NSArray<BSNode *> *solution = [self searchSolutionWithNode:rootNode depth:kBSSearcherInitialDepthLevel];
 	completionBlock(solution, self.error);
 }
 
@@ -62,7 +62,7 @@ static NSUInteger kBSSearcherInitialDepthLevel = 0;
 	return [NSError errorWithDomain:kBSSolutionSearcherErrorDomain code:kBSSolutionSearcherErrorDepthLimitOut userInfo:userInfo];
 }
 
-- (NSArray<BSNode *> *)searchSolutionWithCurrentNode:(BSNode *)currentNode depth:(NSUInteger)depth
+- (NSArray<BSNode *> *)searchSolutionWithNode:(BSNode *)node depth:(NSUInteger)depth
 {
 	@throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"%@ must be overridden", NSStringFromSelector(_cmd)] userInfo:nil];
 }
